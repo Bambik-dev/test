@@ -1,0 +1,12 @@
+{
+  "timers": [
+    { "name": "Timer 1", "time": "00:05:23" },
+    { "name": "Timer 2", "time": "00:12:10" },
+    { "name": "Timer 3", "time": "00:20:45" }
+  ],
+  "pricing": [
+    { "name": "Pakiet Podstawowy", "price": "10 PLN/miesiąc" },
+    { "name": "Pakiet Premium", "price": "30 PLN/miesiąc" },
+    { "name": "Pakiet VIP", "price": "50 PLN/miesiąc" }
+  ]
+}
